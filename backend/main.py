@@ -1,28 +1,8 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
-from datetime import date
+from backend.DataAccessLayer.User import UserDAL
+import asyncio
 
-app=FastAPI()
-
+user=UserDAL()
 
 
-@app.get('/one')
-def asdf():
-    return {"message": "Hello world"}
+asyncio.run(user.create_user("aditi", "aditi","aditi@gmail.com", "asdfasdf", "2004-10-24", "female"))
 
-
-@app.get('/two')
-def hello():
-    return{"message":"hii"}
-
-
-class info(BaseModel):
-    username: str
-    email: str
-    password: str
-    dob: date
-    
-
-@app.post('/three')
-def h():
-    return{"message":"How are you"}
