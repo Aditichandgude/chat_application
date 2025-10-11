@@ -14,5 +14,3 @@ class Otp(Base):
     is_used=Column(BOOLEAN, nullable=False, default=False)
     expires_at=Column(DATETIME, nullable=False)
     created_at=Column(DATETIME, nullable=False, default=datetime.datetime.utcnow)
-
-    user = relationship("user", back_populates="otp")
