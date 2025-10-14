@@ -24,4 +24,4 @@ create table otp(
     foreign key (user_id) references user(id)
 )
 
--- these are my changes for testing purpose
+-- these are my changes for testing purpose (updated)
