@@ -16,10 +16,12 @@ create table user(
 drop table otp;
 create table otp(
     id char(36) primary key,
-    user_id char(36) not null,
+    user_id char(36) not null,  
     code varchar(10) not null,
     is_used boolean not null default false,
     expires_at datetime not null,
     created_at datetime not null default now(),
     foreign key (user_id) references user(id)
 )
+
+-- these are my changes for testing purpose (updated)
