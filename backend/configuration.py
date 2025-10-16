@@ -3,6 +3,7 @@ import databases
 
 class Settings(BaseSettings):
     MYSQL_DATABASE_CONNECTION_STRING: str
+    PUBLIC_KEY_FOR_JWT: str
 
     class Config:
         env_file='backend/.env'

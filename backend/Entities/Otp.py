@@ -13,4 +13,4 @@ class Otp(Base):
     code=Column(VARCHAR(10), nullable=False)
     is_used=Column(BOOLEAN, nullable=False, default=False)
     expires_at=Column(DATETIME, nullable=False)
-    created_at=Column(DATETIME, nullable=False, default=datetime.datetime.utcnow)
+    created_at=Column(DATETIME, nullable=False, default=datetime.datetime.now(datetime.UTC))

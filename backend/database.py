@@ -1,4 +1,4 @@
-from backend.configuration import database, setting
+from backend.configuration import setting
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 
 engine=create_async_engine(setting.MYSQL_DATABASE_CONNECTION_STRING, echo=True, future=True)

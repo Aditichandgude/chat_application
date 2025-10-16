@@ -14,5 +14,5 @@ class User(Base):
     profile_picture=Column(VARCHAR(256), nullable=True)
     date_of_birth=Column(DATE, nullable=False)
     gender=Column(ENUM('male', 'female', 'other'), nullable=False)
-    created_at=Column(DATETIME, nullable=False, default=datetime.datetime.utcnow)
+    created_at=Column(DATETIME, nullable=False, default=datetime.datetime.now(datetime.UTC))
     updated_at=Column(DATETIME, nullable=True)
